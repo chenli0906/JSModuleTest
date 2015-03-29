@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+    <div id="module1"></div>
+    <div id="module2"></div>
+
+    <script src="lib/sea.js"></script>
+    <script>
+        // seajs 的简单配置
+        seajs.config({
+            base: "./js",
+            alias: {
+                "Module1": "module1",
+                "Module2": "module2"
+            }
+        });
+
+        // 加载入口模块
+        seajs.use("main");
+    </script>
+</body>
+</html>
